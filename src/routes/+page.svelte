@@ -19,30 +19,28 @@
 	const handleShowPrevImage = () => (image = data.meta[image.prev!]);
 </script>
 
-<div class="fixed w-full py-5 px-4 bg-black bg-opacity-75 backdrop-blur-sm z-20">
+<div class="fixed w-fit pt-5 md:pt-6 pb-5 px-4 z-30">
 	<p class="text-4xl leading-none">Galleria</p>
-	<div class="mt-2 flex justify-between text-sm">
-		<p class="text-[#aaa] text-opacity-55 leading-none">by Giacomo Folli</p>
-		<div class="w-fit text-right">
-			<p class="flex items-center gap-1">
-				foto di <a class="underline" href="https://www.instagram.com/paco.nocap/">gepy </a><LinkIcon
-				/>
-			</p>
-			<p class="flex items-center gap-1">
-				foto di <a class="underline" href="https://www.instagram.com/martina.pagliara/"
-					>marti
-				</a><LinkIcon />
-			</p>
-			<p class="flex items-center gap-1">
-				foto di <a class="underline" href="https://www.instagram.com/_pietro_g02/"
-					>pietro
-				</a><LinkIcon />
-			</p>
-		</div>
-	</div>
+	<p class="text-[#aaa] text-sm text-opacity-55 leading-none">by Giacomo Folli</p>
 </div>
 
-<div class="pt-32">
+<div class="sticky -top-16 w-full h-20 py-5 px-4 bg-black backdrop-blur-lg z-20" />
+<div class="sticky top-0 w-full text-right text-xs md:text-sm py-5 pt-[25px] px-4 bg-black bg-opacity-75 backdrop-blur-sm z-20">
+	<p class="flex items-center justify-end gap-1">
+		foto di <a class="underline" href="https://www.instagram.com/paco.nocap/">gepy </a><LinkIcon />
+	</p>
+	<p class="flex items-center justify-end gap-1">
+		foto di <a class="underline" href="https://www.instagram.com/martina.pagliara/"
+			>marti
+		</a><LinkIcon />
+	</p>
+	<p class="flex items-center justify-end gap-1">
+		foto di <a class="underline" href="https://www.instagram.com/_pietro_g02/">pietro </a><LinkIcon
+		/>
+	</p>
+</div>
+
+<div class="">
 	<div class="w-full grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1">
 		{#each fotos as foto, i}
 			<button class="relative" on:click={() => handleImageClick(i)}>
@@ -50,7 +48,7 @@
 					loading="lazy"
 					src={foto.src}
 					alt={foto.alt}
-					class="aspect-square object-cover hover:opacity-80 hover:shadow-inner hover:border-b-[20px] hover:border-black" 
+					class="aspect-square object-cover hover:opacity-80 hover:shadow-inner hover:border-b-[20px] hover:border-black"
 				/>
 
 				{#if !!foto && !!foto.info?.name && showTitles}

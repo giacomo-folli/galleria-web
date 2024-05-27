@@ -4,10 +4,10 @@
 	let promise: Promise<boolean> = new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(true);
-		}, 3500);
+		}, 3000);
 	});
 
-	$: loaded = false;
+	let loaded: boolean = false;
 	promise.then((success) => (loaded = success));
 </script>
 
@@ -29,7 +29,6 @@
 				/>
 			</svg>
 		</div>
-		<!-- <div class="mx-auto text-sm font-sans text-[#999]">ci sei quasi...</div> -->
 		<span class="mx-auto type-welcome text-sm text-[#999]"></span>
 	</div>
 {/if}
