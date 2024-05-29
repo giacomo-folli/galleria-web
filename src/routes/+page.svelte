@@ -45,7 +45,6 @@
 		{#each fotos as foto, i}
 			<button class="relative" on:click={() => handleImageClick(i)}>
 				<img
-					loading="lazy"
 					src={foto.src}
 					alt={foto.alt}
 					class="aspect-square object-cover hover:opacity-80 hover:shadow-inner hover:border-b-[20px] hover:border-black"
