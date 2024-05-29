@@ -155,15 +155,6 @@ const fotos: Pick<Image, 'src' | 'alt' | 'info'>[] = [
 		}
 	},
 	{
-		src: '/images/SALSOMAGGIO24-18.jpg',
-		alt: 'Foto evento',
-		info: {
-			name: '19 - Altrove',
-			author: 'giacomo folli',
-			data: '25/05/2024'
-		}
-	},
-	{
 		src: '/images/SALSOMAGGIO24-19.jpg',
 		alt: 'Foto evento',
 		info: {
@@ -236,7 +227,7 @@ const fotos: Pick<Image, 'src' | 'alt' | 'info'>[] = [
 		}
 	},
 	{
-		src: '/images/SALSOMAGGIO24-28.jpg',
+		src: '/images/SALSOMAGGIO24-27.jpg',
 		alt: 'Foto evento',
 		info: {
 			name: '29 - 2',
@@ -330,6 +321,15 @@ const fotos: Pick<Image, 'src' | 'alt' | 'info'>[] = [
 		alt: 'Foto evento',
 		info: {
 			name: '39 - Santa Rita',
+			author: 'giacomo folli',
+			data: '25/05/2024'
+		}
+	},
+	{
+		src: '/images/SALSOMAGGIO24-40.jpg',
+		alt: 'Foto evento',
+		info: {
+			name: '40 - Soggetti',
 			author: 'giacomo folli',
 			data: '25/05/2024'
 		}
