@@ -1,10 +1,11 @@
 <script lang="ts">
 	import './app.css';
 
+	const LOADER_WAIT_TIME = 3500
 	let promise: Promise<boolean> = new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(true);
-		}, 3000);
+		}, LOADER_WAIT_TIME);
 	});
 
 	let loaded: boolean = false;
