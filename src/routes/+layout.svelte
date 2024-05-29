@@ -1,12 +1,16 @@
 <script lang="ts">
+	import { inject } from '@vercel/analytics';
 	import './app.css';
 
-	const LOADER_WAIT_TIME = 3500
+	const LOADER_WAIT_TIME = 3500;
 	let promise: Promise<boolean> = new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(true);
 		}, LOADER_WAIT_TIME);
 	});
+
+	// just to get some analytics from vercel
+	inject({mode: 'auto'})
 
 	let loaded: boolean = false;
 	promise.then((success) => (loaded = success));
