@@ -1,13 +1,11 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import type { Image } from '$lib';
-	import fotos from '$lib/foto';
 
 	export let image: Partial<Image & { next: number; prev: number; index: number }> = {},
 		opened: boolean = false;
 </script>
 
-<div class="w-[100vw] bg-black">
+<div class="w-[100dvw] bg-black">
 	<div class="absolute top-4 right-4">
 		<button on:click={() => (opened = !opened)}>
 			<svg
@@ -23,7 +21,12 @@
 		</button>
 	</div>
 
-	<div class="w-full h-[100vh] flex flex-col justify-center">
+	<div
+		class="w-full h-[100dvh] flex flex-col justify-center"
+		role="presentation"
+		on:keypress
+		on:click={() => (opened = !opened)}
+	>
 		{#if !!image && !!image.src}
 			<img class="mx-auto object-contain h-[80vh] w-[92vw]" src={image.src} alt={image.alt} />
 		{:else}

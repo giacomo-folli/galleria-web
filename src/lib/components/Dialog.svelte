@@ -111,6 +111,7 @@
 		<div
 			style:background-color={_overlayColor}
 			class="overlay"
+			role="presentation"
 			class:overlay-active={localOpen}
 			class:hidden-behind={!localOpen && !hasBeenOpened}
 			on:click={handleOverlayClick}
@@ -141,6 +142,7 @@
 			style:z-index={zIndex + 1}
 			on:click|stopPropagation
 			on:keypress|stopPropagation
+			role="presentation"
 			class:fly-down-in={transition == 'fly-down' && localOpen}
 			class:fly-down-out={transition == 'fly-down' && !localOpen && hasBeenOpened}
 			class:fly-up-in={transition == 'fly-up' && localOpen}
@@ -159,6 +161,7 @@
 			style:z-index={zIndex + 1}
 			on:click|stopPropagation
 			on:keypress|stopPropagation
+			role="presentation"
 			class:fly-down-in={transition == 'fly-down' && localOpen}
 			class:fly-down-out={transition == 'fly-down' && !localOpen && hasBeenOpened}
 			class:fly-up-in={transition == 'fly-up' && localOpen}
@@ -177,6 +180,7 @@
 			style:z-index={zIndex + 1}
 			on:click|stopPropagation
 			on:keypress|stopPropagation
+			role="presentation"
 			class:fly-down-in={transition == 'fly-down' && localOpen}
 			class:fly-down-out={transition == 'fly-down' && !localOpen && hasBeenOpened}
 			class:fly-up-in={transition == 'fly-up' && localOpen}
@@ -196,8 +200,8 @@
 
 <style>
 	.overlay-container {
-		height: 100vh;
-		width: 100vw;
+		height: 100dvh;
+		width: 100dvw;
 		position: fixed;
 		top: 0px;
 		left: 0px;
