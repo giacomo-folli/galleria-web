@@ -8,7 +8,7 @@ class Teleporter {
   private nodes: Record<TeleportingUid, Element> = {}
 
   constructor() {
-    if(!BROWSER) throw new Error('cannot teleport wihout a browser running')
+    if (!BROWSER) throw new Error('cannot teleport wihout a browser running')
 
     this.loadBodyAndNodes()
   }
@@ -18,7 +18,7 @@ class Teleporter {
     const elements = Array.from(document.getElementsByClassName('_teleported'))
 
     this.nodes = {}
-    for(let i = 0; i < elements.length; i += 1) {
+    for (let i = 0; i < elements.length; i += 1) {
       const teleportedUid = elements[i].getAttribute('teleported-uid')
       if (!!teleportedUid) {
         this.nodes[teleportedUid] = elements[i]
