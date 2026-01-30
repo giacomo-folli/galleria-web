@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { Image } from '$lib/types.js';
+	// import type { Image } from '$lib/types.js';
 	import fotos from '$lib/foto';
 
-	export let data;
+	// export let data;
 
-	let dialogOpen: boolean = false,
-		image: Partial<Image> = {};
+	// let dialogOpen: boolean = false,
+	// 	image: Partial<Image> = {};
 
 	function handleImageClick(i: number) {
-		dialogOpen = true;
-		image = data.meta[i];
+		// dialogOpen = true;
+		// image = data.meta[i];
 	}
 </script>
 
