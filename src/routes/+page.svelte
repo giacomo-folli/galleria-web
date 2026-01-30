@@ -30,6 +30,7 @@
 				<img
 					src={foto.src}
 					alt={foto.alt}
+					loading="lazy"
 					class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
 				/>
 
